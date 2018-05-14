@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "swiftViewController-Swift.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)butonAction:(id)sender
+{
+    swiftViewController * productDetailVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"swiftViewController"];
+    
+   // [self.navigationController pushViewController:productDetailVC animated:TRUE];
+    
+    [self presentViewController:productDetailVC animated:true completion:nil];
 }
 
 

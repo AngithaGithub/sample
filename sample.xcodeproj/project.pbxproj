@@ -14,6 +14,7 @@
 		526BEB9120A974B500B931A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 526BEB9020A974B500B931A2 /* Assets.xcassets */; };
 		526BEB9420A974B600B931A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526BEB9220A974B600B931A2 /* LaunchScreen.storyboard */; };
 		526BEB9720A974B600B931A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 526BEB9620A974B600B931A2 /* main.m */; };
+		526BEB9F20A97D7F00B931A2 /* swiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BEB9E20A97D7F00B931A2 /* swiftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		526BEB9320A974B600B931A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		526BEB9520A974B600B931A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		526BEB9620A974B600B931A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		526BEB9D20A97D7D00B931A2 /* sample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sample-Bridging-Header.h"; sourceTree = "<group>"; };
+		526BEB9E20A97D7F00B931A2 /* swiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +67,14 @@
 				526BEB8520A9748700B931A2 /* AppDelegate.m */,
 				526BEB8720A9748700B931A2 /* ViewController.h */,
 				526BEB8820A9748700B931A2 /* ViewController.m */,
+				526BEB9E20A97D7F00B931A2 /* swiftViewController.swift */,
 				526BEB8A20A9748700B931A2 /* Main.storyboard */,
 				526BEB9020A974B500B931A2 /* Assets.xcassets */,
 				526BEB9220A974B600B931A2 /* LaunchScreen.storyboard */,
 				526BEB9520A974B600B931A2 /* Info.plist */,
 				526BEB9620A974B600B931A2 /* main.m */,
 				526BEB8D20A9748800B931A2 /* sample.xcdatamodeld */,
+				526BEB9D20A97D7D00B931A2 /* sample-Bridging-Header.h */,
 			);
 			path = sample;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 				TargetAttributes = {
 					526BEB8020A9748700B931A2 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -148,6 +154,7 @@
 				526BEB8620A9748700B931A2 /* AppDelegate.m in Sources */,
 				526BEB9720A974B600B931A2 /* main.m in Sources */,
 				526BEB8F20A9748800B931A2 /* sample.xcdatamodeld in Sources */,
+				526BEB9F20A97D7F00B931A2 /* swiftViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UFS6KN4V45;
 				INFOPLIST_FILE = sample/Info.plist;
@@ -295,7 +303,11 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ispg.sample;
+				PRODUCT_MODULE_NAME = swiftViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sample/sample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -304,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UFS6KN4V45;
 				INFOPLIST_FILE = sample/Info.plist;
@@ -312,7 +325,10 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ispg.sample;
+				PRODUCT_MODULE_NAME = swiftViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sample/sample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
